@@ -2,8 +2,8 @@
 
 ## 前言
 
-* 训练模型下载：[阿里云盘](https://www.aliyundrive.com/s/nsf99boD8zK) 提取码: `co32` / [百度网盘](https://pan.baidu.com/s/12ITLwNaLuwOEwKqRLOSc-A?pwd=cr27) 提取码: `cr27`
-* whl离线依赖：[阿里云盘](https://www.aliyundrive.com/s/ZvV7UV9YfUK) 提取码: `co32` / [百度网盘](https://pan.baidu.com/s/1wai8ufqWIGJR-mqhlOIYQg?pwd=p4ga) 提取码: `p4ga`
+* 训练模型下载：[阿里云盘](https://www.aliyundrive.com/s/nsf99boD8zK) 提取码: `co32` / [百度网盘](https://pan.baidu.com/s/1wai8ufqWIGJR-mqhlOIYQg?pwd=p4ga) 提取码: `p4ga`
+* whl离线依赖：[阿里云盘](https://www.aliyundrive.com/s/ZvV7UV9YfUK) 提取码: `co32` / [百度网盘](https://pan.baidu.com/s/12ITLwNaLuwOEwKqRLOSc-A?pwd=cr27) 提取码: `cr27`
 
 ## 使用说明
 
