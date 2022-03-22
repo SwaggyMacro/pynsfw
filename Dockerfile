@@ -1,5 +1,8 @@
 FROM python:3.9.8
 
+ENV IP=0.0.0.0
+ENV PORT=54321
+
 # 创建文件夹
 RUN mkdir /nsfw
 

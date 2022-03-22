@@ -85,13 +85,36 @@ cd pynsfw
 # 编译镜像
 docker build . -t pynsfw:latest
 
-# 运行
-docker run -itd --network=host --name=nsfw pynsfw:latest
+# 运行（映射模型，自定义IP端口）
+docker run -itd \
+    -e IP=127.0.0.1 \
+    -e PORT=54321 \
+    -v <nsfw路径>/Model:/nsfw/Model
+    --restart=always \
+    --network=host \
+    --name=nsfw \
+    pynsfw:latest
 
 # 查看输出日志
 docker logs -f --tail=500 nsfw
 ```
 
+docker-compose：
+
+```yml
+version: '3'
+services:
+  nsfw:
+    image: pynsfw:latest
+    container_name: nsfw
+    network_mode: "host"
+    restart: always
+    environment:
+      - IP=192.168.0.88
+      - PORT=2333
+    volumes: 
+      - <nsfw路径>/Model:/nsfw/Model
+```
 
 
 
