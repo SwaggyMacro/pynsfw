@@ -89,7 +89,7 @@ docker build . -t pynsfw:latest
 docker run -itd \
     -e IP=127.0.0.1 \
     -e PORT=54321 \
-    -v <nsfw路径>/Model:/nsfw/Model
+    -v <nsfw路径>/Model:/nsfw/Model \
     --restart=always \
     --network=host \
     --name=nsfw \
