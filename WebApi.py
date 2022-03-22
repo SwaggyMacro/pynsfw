@@ -7,6 +7,8 @@
 # @Desc : A Flask WebApi For NSFW
 # @Software: PyCharm
 
+import sys
+import getopt
 import os
 import io
 import json
@@ -31,8 +33,25 @@ def get_tasks():
         return result
 
 
-nsfw = Nsfw(os.path.abspath('.') + "\\Model\\ckpt.h5")
-server = make_server('0.0.0.0', 54321, app)
+ip = '0.0.0.0'
+port = '54321'
+
+argv = sys.argv[1:]
+try:
+	opts, args = getopt.getopt(argv, "i:p:", ["ip=","port="])
+	for opt, arg in opts:
+		if opt in ['-i', '--ip']:
+		   ip = arg
+		elif opt in ['-p', '--port']:
+		   port = arg
+except:
+	print("Error")
+
+nsfw = Nsfw(os.path.abspath('.') + "/Model/ckpt.h5")
+server = make_server(ip, int(port), app)
+
+print('鉴黄接口启动成功....')
+print('---> 地址：http://%s:%s/nsfw'%(ip,port))
+
 server.serve_forever()
 app.run()
-
