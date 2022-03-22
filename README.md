@@ -86,7 +86,10 @@ cd pynsfw
 docker build . -t pynsfw:latest
 
 # 运行
-docker run -itd --network=host --name=nsfw nsfw:latest
+docker run -itd --network=host --name=nsfw pynsfw:latest
+
+# 查看输出日志
+docker logs -f --tail=500 nsfw
 ```
 
 
