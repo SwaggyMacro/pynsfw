@@ -53,6 +53,28 @@ python WebApi.py -ip=127.0.0.1 --port=2333
 > 
 > `Dockerfile-offline` 为离线编译。使用 `Dockerfile-offline` 时，需要将文件名改为 `Dockerfile`，并下载 `Pythone` 离线依赖。[下载地址](https://www.aliyundrive.com/s/ZvV7UV9YfUK) 提取码: `co32`
 
+
+目录树：
+
+```
+pynsfw
+ ├── Dockerfile
+ ├── Dockerfile-offline
+ ├── Model
+ │   └── ckpt.h5
+ ├── nsfw.py
+ ├── README.md
+ ├── requirements.txt
+ ├── run.sh
+ ├── WebApi.py
+ └── whl
+     ├── absl_py-1.0.0-py3-none-any.whl
+     ├── astunparse-1.6.3-py2.py3-none-any.whl
+     └── 省略一大堆依赖包......
+```
+
+打包编译指令：
+
 ```bash
 # 下载源码
 git clone https://github.com/SwaggyMacro/pynsfw.git
